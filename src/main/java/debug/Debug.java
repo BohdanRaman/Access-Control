@@ -5,8 +5,16 @@
  */
 package debug;
 
-public class Debug {
-    public void debug(String s) {
-        System.out.println(s);
+public class Debug extends ClassWithProtectedMethod {
+    public static void main(String[] args) {
+
+        /* I can extend class ClassWithProtectedMethod and colling protected method showResult*/
+        Debug debug = new Debug();
+        debug.showResult("Hello");
     }
+
+    public String debug(String s) {
+        return s;
+    }
+
 }

@@ -6,7 +6,7 @@
 package debugoff;
 
 public class Debug {
-    public void debug(String str) {
-
+    public String debug(String string) {
+        return string;
     }
 }
