@@ -5,5 +5,4 @@
 package outside;
 
 public class OutsideClass {
-
 }

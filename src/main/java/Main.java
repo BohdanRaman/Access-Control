@@ -32,6 +32,5 @@ public class Main {
         System.out.println(modifiers.getSurName());
         System.out.println(modifiers.getName());
         System.out.println(modifiers.getNumber());
-
     }
 }

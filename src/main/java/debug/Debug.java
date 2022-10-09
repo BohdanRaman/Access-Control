@@ -16,5 +16,4 @@ public class Debug extends ClassWithProtectedMethod {
     public String debug(String s) {
         return s;
     }
-
 }

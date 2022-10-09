@@ -16,6 +16,5 @@ public class ProtectedDate {
             System.out.println(protectedDate.age);
             System.out.println(protectedDate.name);
         }
-
     }
 }

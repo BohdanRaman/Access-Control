@@ -1,9 +1,5 @@
 package task6;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
-
 public class ExampleAllAccessModifiers {
     int number;
     public int age;

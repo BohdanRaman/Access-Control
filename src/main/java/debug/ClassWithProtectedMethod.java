@@ -4,10 +4,8 @@
 
 package debug;
 
-
 public class ClassWithProtectedMethod{
 
     protected void showResult(String s) {
-
     }
 }

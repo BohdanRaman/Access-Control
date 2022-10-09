@@ -4,7 +4,6 @@
  * Use a static import line to import the class into a test program, and demonstrate the conditional compilation effect./
  */
 package debugoff;
-
 public class Debug {
     public String debug(String string) {
         return string;
