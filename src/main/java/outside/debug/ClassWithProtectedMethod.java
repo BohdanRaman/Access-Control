@@ -2,7 +2,7 @@
  * Show that protected methods have package access but are not public.
  */
 
-package debug;
+package outside.debug;
 
 public class ClassWithProtectedMethod{
 
