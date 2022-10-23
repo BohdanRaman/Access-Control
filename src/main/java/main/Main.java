@@ -1,8 +1,8 @@
 package main;
 
-import outside.debug.Debug;
-import outside.OutsideClass;
-import task5.ExampleAllAccessModifiers;
+import debug.Debug;
+import debug.OutsideClass;
+import access_modifiers.ExampleAllAccessModifiers;
 
 public class Main {
     public static void main(String[] args) {

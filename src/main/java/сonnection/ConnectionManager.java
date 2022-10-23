@@ -11,7 +11,10 @@ package сonnection;
 import com.sun.jdi.connect.spi.Connection;
 
 public class ConnectionManager {
-    Integer i = 10;
-
+    Integer i;
     Connection[] connection = new Connection[i];
+
+    public static void getConnect(){
+
+    }
 }

@@ -3,7 +3,7 @@
  * The first version displays its String argument to the console, the second does nothing.
  * Use a static import line to import the class into a test program, and demonstrate the conditional compilation effect./
  */
-package outside.debug;
+package debug;
 
 public class Debug extends ClassWithProtectedMethod {
     public static void main(String[] args) {
