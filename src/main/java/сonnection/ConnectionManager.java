@@ -6,18 +6,26 @@
  * objects, it returns a null reference. Test the classes in main( ).
  */
 /*Следуя форме примера Lunch.java, создайте класс с именем ConnectionManager, который управляет фиксированным массивом объектов Connection.
-Клиентский программист не должен иметь возможности явного создания объектов Connection, а может только получить их из статического метода в ConnectionManager.
+Клиентский программист не должен иметь возможности явного создания объектов Connection,
+а может только получить их из статического метода в ConnectionManager.
 Когда в ConnectionManager параметр выходит за пределы объектов, он возвращает ссылку на null. Проверьте классы в main( ).*/
 
 package сonnection;
 
 public class ConnectionManager {
+    private ConnectionManager() {
+    }
 
-    public static Object getConnect() {
-        ConnectionManager[]   connection = new ConnectionManager[6];
-        for (int i = 0; i < connection.length; i++) {
+    public static void getConnect() {
+        ConnectionManager[] connection = new ConnectionManager[6];
+
+        for (int i = 0; i < 6; i++) {
             System.out.println(connection[i]);
         }
-        return null;
+    }
+}
+
+class FirstConnect {
+    private FirstConnect() {
     }
 }

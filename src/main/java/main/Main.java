@@ -36,8 +36,7 @@ public class Main {
 
         /* Task 8*/
         System.out.println("Task 8");
-        ConnectionManager connectionManager = new ConnectionManager();
-        System.out.println(ConnectionManager.getConnect());
+        ConnectionManager.getConnect();
 
     }
 }
