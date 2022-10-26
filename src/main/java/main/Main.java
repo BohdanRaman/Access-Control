@@ -3,6 +3,7 @@ package main;
 import debug.Debug;
 import debug.OutsideClass;
 import access_modifiers.ExampleAllAccessModifiers;
+import сonnection.ConnectionManager;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,5 +36,8 @@ public class Main {
 
         /* Task 8*/
         System.out.println("Task 8");
+        ConnectionManager connectionManager = new ConnectionManager();
+        System.out.println(ConnectionManager.getConnect());
+
     }
 }
