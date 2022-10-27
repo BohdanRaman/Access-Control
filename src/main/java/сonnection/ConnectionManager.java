@@ -5,27 +5,21 @@
  * via a static method in ConnectionManager. When the ConnectionManager runs out of
  * objects, it returns a null reference. Test the classes in main( ).
  */
-/*Следуя форме примера Lunch.java, создайте класс с именем ConnectionManager, который управляет фиксированным массивом объектов Connection.
-Клиентский программист не должен иметь возможности явного создания объектов Connection,
-а может только получить их из статического метода в ConnectionManager.
-Когда в ConnectionManager параметр выходит за пределы объектов, он возвращает ссылку на null. Проверьте классы в main( ).*/
-
 package сonnection;
 
 public class ConnectionManager {
-    private ConnectionManager() {
-    }
+    private static final int MANAGER = 3;
 
     public static void getConnect() {
-        ConnectionManager[] connection = new ConnectionManager[6];
-
-        for (int i = 0; i < 6; i++) {
-            System.out.println(connection[i]);
+        ConnectionManager[] connection = new ConnectionManager[MANAGER];
+        for (ConnectionManager c : connection) {
+            System.out.println(c);
         }
     }
 }
 
-class FirstConnect {
-    private FirstConnect() {
+  /*
+        public void methodConnection() {
+        connectionManager = Singleton.getConnectionManager();
     }
-}
+   */
