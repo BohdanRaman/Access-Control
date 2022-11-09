@@ -1,6 +1,6 @@
 package singleton;
 
-import сonnection.ConnectionManager;
+import сonnection_exercise8.ConnectionManager;
 
 public class Singleton {
     private static ConnectionManager connectionManager;
@@ -14,4 +14,6 @@ public class Singleton {
         }
         return connectionManager;
     }
+
+
 }

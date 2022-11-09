@@ -4,7 +4,7 @@ import debug.Debug;
 import debug.OutsideClass;
 import access_modifiers.ExampleAllAccessModifiers;
 import singleton.Singleton;
-import сonnection.ConnectionManager;
+import сonnection_exercise8.ConnectionManager;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,7 +38,7 @@ public class Main {
         /* Task 8*/
         System.out.println("Task 8");
         ConnectionManager con = Singleton.getConnectionManager();
+        con.methodConnection();
         ConnectionManager.getConnect();
-
     }
 }
