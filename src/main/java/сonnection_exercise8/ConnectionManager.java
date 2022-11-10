@@ -5,33 +5,29 @@
  * via a static method in ConnectionManager. When the ConnectionManager runs out of
  * objects, it returns a null reference. Test the classes in main( ).
  */
-/*  */
+
 package сonnection_exercise8;
 
 import singleton.Singleton;
 
 public class ConnectionManager {
-    private ConnectionManager connectionManager;
 
     public ConnectionManager() {
     }
 
     public static void getConnect() {
         ConnectionObject[] connection = new ConnectionObject[3];
-        connection[0] = new ConnectionObject(1, "Object1");
-        connection[1] = new ConnectionObject(2, "Object2");
-        connection[2] = new ConnectionObject(3, "Object3");
-        for (ConnectionObject connect: connection) {
-            System.out.println("Age: " + connect.getAge() + "; Name: " + connect.getName());
-
+        connection[0] = new ConnectionObject(1, "Object_1");
+        connection[1] = new ConnectionObject(2, "Object_2");
+        connection[2] = new ConnectionObject(3, "Object_3");
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Age: " + connection[i].getAge() + " ; Name: " + connection[i].getName());
         }
     }
 
-
     public void methodConnection() {
-        connectionManager = Singleton.getConnectionManager();
+        Singleton.getConnectionManager();
     }
-
 }
 
 class ConnectionObject {
@@ -41,10 +37,6 @@ class ConnectionObject {
     public ConnectionObject(int age, String name) {
         this.age = age;
         this.name = name;
-    }
-
-    public ConnectionObject() {
-
     }
 
     public int getAge() {
@@ -63,9 +55,4 @@ class ConnectionObject {
         this.name = name;
     }
 
-    private static ConnectionObject object = new ConnectionObject();
-
-    public static ConnectionObject access() {
-        return object;
-    }
 }
