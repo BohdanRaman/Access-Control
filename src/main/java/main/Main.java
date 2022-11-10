@@ -38,7 +38,7 @@ public class Main {
         /* Task 8*/
         System.out.println("Task 8");
         ConnectionManager con = Singleton.getConnectionManager();
-        con.methodConnection();
+        con.methodWithSingleton();
         ConnectionManager.getConnect();
     }
 }

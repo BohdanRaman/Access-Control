@@ -12,9 +12,6 @@ import singleton.Singleton;
 
 public class ConnectionManager {
 
-    public ConnectionManager() {
-    }
-
     public static void getConnect() {
         ConnectionObject[] connection = new ConnectionObject[3];
         connection[0] = new ConnectionObject(1, "Object_1");
@@ -25,7 +22,7 @@ public class ConnectionManager {
         }
     }
 
-    public void methodConnection() {
+    public void methodWithSingleton() {
         Singleton.getConnectionManager();
     }
 }
