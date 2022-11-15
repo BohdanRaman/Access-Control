@@ -8,8 +8,6 @@
 
 package сonnection_exercise8;
 
-import singleton.Singleton;
-
 public class ConnectionManager {
 
     public static void getConnect() {

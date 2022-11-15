@@ -3,7 +3,7 @@ package main;
 import debug.Debug;
 import debug.OutsideClass;
 import access_modifiers.ExampleAllAccessModifiers;
-import singleton.Singleton;
+import singleton.InitializedSingleton;
 import сonnection_exercise8.ConnectionManager;
 
 public class Main {
@@ -37,7 +37,7 @@ public class Main {
 
         /* Task 8*/
         System.out.println("Task 8");
-        ConnectionManager con = Singleton.getConnectionManager();
+        InitializedSingleton con = InitializedSingleton.getInstance();
         ConnectionManager.getConnect();
     }
 }
