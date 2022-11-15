@@ -14,42 +14,39 @@ public class ConnectionManager {
 
     public static void getConnect() {
         ConnectionObject[] connection = new ConnectionObject[3];
-        connection[0] = new ConnectionObject(1, "Object_1");
-        connection[1] = new ConnectionObject(2, "Object_2");
-        connection[2] = new ConnectionObject(3, "Object_3");
+        connection[0] = new ConnectionObject(1, "Connect_1");
+        connection[1] = new ConnectionObject(2, "Connect_2");
+        connection[2] = new ConnectionObject(3, "Connect_3");
         for (int i = 0; i < 3; i++) {
-            System.out.println("Age: " + connection[i].getAge() + " ; Name: " + connection[i].getName());
+                System.out.println("Connection Number: " + connection[i].getConnectionNumber() + " ; Name: " + connection[i].getConnectionName());
+            }
         }
-    }
 
-    public void methodWithSingleton() {
-        Singleton.getConnectionManager();
-    }
 }
 
 class ConnectionObject {
-    private int age;
-    private String name;
+    private int connectionNumber;
+    private String connectionName;
 
-    public ConnectionObject(int age, String name) {
-        this.age = age;
-        this.name = name;
+    public ConnectionObject(int connectionNumber, String name) {
+        this.connectionNumber = connectionNumber;
+        this.connectionName = name;
     }
 
-    public int getAge() {
-        return age;
+    public int getConnectionNumber() {
+        return connectionNumber;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setConnectionNumber(int connectionNumber) {
+        this.connectionNumber = connectionNumber;
     }
 
-    public String getName() {
-        return name;
+    public String getConnectionName() {
+        return connectionName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setConnectionName(String connectionName) {
+        this.connectionName = connectionName;
     }
 
 }
