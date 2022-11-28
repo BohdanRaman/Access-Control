@@ -11,40 +11,44 @@ package сonnection_exercise8;
 public class ConnectionManager {
 
     public static void getConnect() {
-        ConnectionObject[] connection = new ConnectionObject[3];
-        connection[0] = new ConnectionObject(1, "Connect_1");
-        connection[1] = new ConnectionObject(2, "Connect_2");
-        connection[2] = new ConnectionObject(3, "Connect_3");
-        for (int i = 0; i < 3; i++) {
-                System.out.println("Connection Number: " + connection[i].getConnectionNumber() + " ; Name: " + connection[i].getConnectionName());
-            }
-        }
-
+        ConnectionObject.access();
+    }
 }
 
 class ConnectionObject {
-    private int connectionNumber;
-    private String connectionName;
+    private int age;
+    private String name;
 
-    public ConnectionObject(int connectionNumber, String name) {
-        this.connectionNumber = connectionNumber;
-        this.connectionName = name;
+    ConnectionObject(int age, String name) {
+        this.age = age;
+        this.name = name;
     }
 
-    public int getConnectionNumber() {
-        return connectionNumber;
+    public int getAge() {
+        return age;
     }
 
-    public void setConnectionNumber(int connectionNumber) {
-        this.connectionNumber = connectionNumber;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public String getConnectionName() {
-        return connectionName;
+    public String getName() {
+        return name;
     }
 
-    public void setConnectionName(String connectionName) {
-        this.connectionName = connectionName;
+    public void setName(String name) {
+        this.name = name;
     }
 
+    private static final ConnectionObject connectionObject = new ConnectionObject(1, "10");
+    public  static ConnectionObject access(){
+        ConnectionObject[] connection = new ConnectionObject[3];
+        connection[0] = new ConnectionObject(1, "Object_1");
+        connection[1] = new ConnectionObject(2, "Object_2");
+        connection[2] = new ConnectionObject(3, "Object_3");
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Age: " + connection[i].getAge() + " ; Name: " + connection[i].getName());
+        }
+        return connectionObject;
+    }
 }
