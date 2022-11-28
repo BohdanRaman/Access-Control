@@ -19,7 +19,7 @@ class ConnectionObject {
     private int age;
     private String name;
 
-    ConnectionObject(int age, String name) {
+    private ConnectionObject(int age, String name) {
         this.age = age;
         this.name = name;
     }
@@ -40,8 +40,9 @@ class ConnectionObject {
         this.name = name;
     }
 
-    private static final ConnectionObject connectionObject = new ConnectionObject(1, "10");
-    public  static ConnectionObject access(){
+    private static  ConnectionObject connectionObject = new ConnectionObject(1, "10");
+
+    public static ConnectionObject access() {
         ConnectionObject[] connection = new ConnectionObject[3];
         connection[0] = new ConnectionObject(1, "Object_1");
         connection[1] = new ConnectionObject(2, "Object_2");
