@@ -8,8 +8,8 @@
 
 package сonnection_exercise8;
 
-public class ConnectionManager {
 
+public class ConnectionManager {
     public static void getConnect() {
         ConnectionObject.access();
     }
@@ -40,16 +40,17 @@ class ConnectionObject {
         this.name = name;
     }
 
-    private static  ConnectionObject connectionObject = new ConnectionObject(1, "10");
+    private static ConnectionObject connectionObject = new ConnectionObject(1, "10");
 
     public static ConnectionObject access() {
         ConnectionObject[] connection = new ConnectionObject[3];
         connection[0] = new ConnectionObject(1, "Object_1");
         connection[1] = new ConnectionObject(2, "Object_2");
         connection[2] = new ConnectionObject(3, "Object_3");
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Age: " + connection[i].getAge() + " ; Name: " + connection[i].getName());
-        }
-        return connectionObject;
+
+            for (int i = 0; i < 3; i++) {
+                System.out.println("Age: " + connection[i].getAge() + " ; Name: " + connection[i].getName());
+            }
+            return connectionObject;
     }
 }
