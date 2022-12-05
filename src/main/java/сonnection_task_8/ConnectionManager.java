@@ -9,56 +9,26 @@
 package сonnection_task_8;
 
 public class ConnectionManager {
-    private ConnectionManager connectionManager;
+    private static ConnectionManager manager;
 
-    public ConnectionManager() {
-    }
-
-    public static void getConnect() {
-        ConnectionObject[] connection = new ConnectionObject[3];
-        connection[0] = new ConnectionObject(1, "Object1");
-        connection[1] = new ConnectionObject(2, "Object2");
-        connection[2] = new ConnectionObject(3, "Object3");
-        for (ConnectionObject connect: connection) {
-            System.out.println("Age: " + connect.getAge() + "; Name: " + connect.getName());
-
+    public static ConnectionManager getInstance() {
+        if (manager == null) {
+            manager = new ConnectionManager();
         }
+        return manager;
     }
 
-}
+    private static final ConnectionObject connectionObject = new ConnectionObject();
 
-class ConnectionObject {
-    private int age;
-    private String name;
+    public ConnectionObject getObject() {
+        ConnectionObject[] connection = new ConnectionObject[3];
+        connection[0] = new ConnectionObject(1, "Object_1");
+        connection[1] = new ConnectionObject(2, "Object_2");
+        connection[2] = new ConnectionObject(3, "Object_3");
 
-    public ConnectionObject(int age, String name) {
-        this.age = age;
-        this.name = name;
-    }
-
-    public ConnectionObject() {
-
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    private static ConnectionObject object = new ConnectionObject();
-
-    public static ConnectionObject access() {
-        return object;
+        for (int i = 0; i < 3; i++) {
+            System.out.println("connectNumber: " + connection[i].getConnectNumber() + "; Name: " + connection[i].getName());
+        }
+        return connectionObject;
     }
 }

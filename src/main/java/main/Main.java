@@ -1,7 +1,6 @@
 package main;
 
 import debug_tasks_4_and_5.Debug;
-import singleton.InitializedSingleton;
 import task_1.OutsideClass;
 import access_modifiers_task_5.ExampleAllAccessModifiers;
 import сonnection_task_8.ConnectionManager;
@@ -37,7 +36,7 @@ public class Main {
 
         /* Task 8*/
         System.out.println("Task 8");
-        InitializedSingleton con = InitializedSingleton.getInstance();
-        ConnectionManager.getConnect();
+        ConnectionManager m =  ConnectionManager.getInstance();
+        m.getObject();
     }
 }
