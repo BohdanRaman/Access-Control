@@ -1,9 +1,10 @@
 package main;
 
-import debug.Debug;
-import debug.OutsideClass;
-import access_modifiers.ExampleAllAccessModifiers;
-import сonnection_exercise8.ConnectionManager;
+import debug_tasks_4_and_5.Debug;
+import singleton.InitializedSingleton;
+import task_1.OutsideClass;
+import access_modifiers_task_5.ExampleAllAccessModifiers;
+import сonnection_task_8.ConnectionManager;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,9 +18,9 @@ public class Main {
         Debug debug = new Debug();
         /* I Can’t use package-access member from another package. Class main.Main is not in the package Debug
          * and I don't colling protected method showResult */
-        debugoff.Debug debugOff = new debugoff.Debug();
+        debugoff_tasks_4_and_5.Debug debugOff = new debugoff_tasks_4_and_5.Debug();
         System.out.println(debug.debug("Hello Java"));
-        System.out.println(debugOff.debug("Ogo-go") + "\n");
+        System.out.println(debugOff.debug("Am I right ?") + "\n");
 
         /* Task 5*/
         System.out.println("Task 5");
@@ -36,7 +37,7 @@ public class Main {
 
         /* Task 8*/
         System.out.println("Task 8");
-        ConnectionManager m =  ConnectionManager.getInstance();
-        m.getObject();
+        InitializedSingleton con = InitializedSingleton.getInstance();
+        ConnectionManager.getConnect();
     }
 }

@@ -1,4 +1,4 @@
-package protected_date;
+package protected_date_task_6;
 
 /**
  * Create a class with protected data. Create a second class in the same file
