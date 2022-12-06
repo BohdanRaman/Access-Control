@@ -8,6 +8,8 @@
 
 package сonnection_task_8;
 
+import java.util.Arrays;
+
 public class ConnectionManager {
     private static ConnectionManager manager;
 
@@ -21,12 +23,14 @@ public class ConnectionManager {
     private static final ConnectionObject connectionObject = new ConnectionObject();
 
     public ConnectionObject getObject() {
-        ConnectionObject[] connection = new ConnectionObject[3];
+        ConnectionObject[] connection = new ConnectionObject[10];
         connection[0] = new ConnectionObject(1, "Object_1");
         connection[1] = new ConnectionObject(2, "Object_2");
         connection[2] = new ConnectionObject(3, "Object_3");
-
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 10; i++) {
+            if (connection[i]==null){
+                break;
+            }
             System.out.println("connectNumber: " + connection[i].getConnectNumber() + "; Name: " + connection[i].getName());
         }
         return connectionObject;
